@@ -1,22 +1,3 @@
-function findShortestDistance(distances, visited) {
-
-   let smallest = null
-   // Iterates over each node in the distances object
-   for (let node in distances) {
-      // if smallest is null and is not visited assign to smallest 
-      if (smallest === null && !visited.includes(node)) {
-         smallest = node
-         // If the node hasn't been visited and its distance is less 
-         // than the current smallest, update smallest
-      } else if (!visited.includes(node) && distances[node] < distances[smallest]) {
-         smallest = node
-      }
-      // Return the smallest node
-      return smallest
-   }
-}
-
-
 function dijkstra(graph, sourceNode, destinationNode) {
    let distances = {};
    let previous = {};
